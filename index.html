@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Бар лжецов. Кубики.</title>
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="game-wrapper">
+            <div class="cubes-wrapper -hidden"></div>
+            <div class="action-wrapper">
+                <div>
+                    <button class="button" type="button" id="generate-cubes">
+                        Бросить кубики
+                    </button>
+                </div>
+                <div>
+                    <label for="dices-amount">Количество кубиков</label>
+                    <select id="dices-amount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" selected>5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.game-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cubes-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dice {
+    width: 80px;
+    height: 80px;
+
+    &.one {
+        background-image: url('icons/dice-one.svg');
+    }
+
+    &.two {
+        background-image: url('icons/dice-two.svg');
+    }
+
+    &.three {
+        background-image: url('icons/dice-three.svg');
+    }
+
+    &.four {
+        background-image: url('icons/dice-four.svg');
+    }
+
+    &.five {
+        background-image: url('icons/dice-five.svg');
+    }
+
+    &.six {
+        background-image: url('icons/dice-six.svg');
+    }
+}
+
+.-hidden {
+    display: none !important;
+}
+
+.action-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    cursor: pointer;
+    height: 40px;
+    min-width: 150px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgb(64, 151, 212);
+}
+
+label {
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+}
