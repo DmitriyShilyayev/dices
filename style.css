@@ -26,30 +26,32 @@
 .dice {
     width: 80px;
     height: 80px;
+    background-position: center center;
+    background-size: contain;
+}
 
-    &.one {
-        background-image: url('icons/dice-one.svg');
-    }
+.dice.one {
+    background-image: url('icons/dice-one.svg');
+}
 
-    &.two {
-        background-image: url('icons/dice-two.svg');
-    }
+.dice.two {
+    background-image: url('icons/dice-two.svg');
+}
 
-    &.three {
-        background-image: url('icons/dice-three.svg');
-    }
+.dice.three {
+    background-image: url('icons/dice-three.svg');
+}
 
-    &.four {
-        background-image: url('icons/dice-four.svg');
-    }
+.dice.four {
+    background-image: url('icons/dice-four.svg');
+}
 
-    &.five {
-        background-image: url('icons/dice-five.svg');
-    }
+.dice.five {
+    background-image: url('icons/dice-five.svg');
+}
 
-    &.six {
-        background-image: url('icons/dice-six.svg');
-    }
+.dice.six {
+    background-image: url('icons/dice-six.svg');
 }
 
 .-hidden {
