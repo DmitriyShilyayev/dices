@@ -1,9 +1,11 @@
 
 let gameButton = document.querySelector('#generate-cubes'),
     dicesAmount = document.querySelector('#dices-amount'),
-    dicesWrapper = document.querySelector('.cubes-wrapper');
+    dicesWrapper = document.querySelector('.cubes-wrapper'),
+    colorButton = document.querySelector('#color-theme');
 
-gameButton.addEventListener('click', startGame)
+gameButton.addEventListener('click', startGame);
+colorButton.addEventListener('click', changeColor);
 
 function startGame() {
     dicesWrapper.innerHTML = ''
@@ -15,24 +17,27 @@ function startGame() {
     }
 
     document.querySelectorAll('.dice').forEach((dice, index) => {
-        rollValue(dice, (index + 1) * 2);
+        setTimeout(() => {
+            setClass(dice, getRandomValue());
+            dice.classList.add('done');
+        }, 1000 * (index + 1));
     })
-
-    for (let i = 1; i <= dicesAmountValue; i++) {
-    }
-}
-
-function rollValue(elem, number) {
-    setClass(elem, getRandomValue());
-    if (number > 0) {
-        setTimeout(() => { rollValue(elem, number - 1) }, Math.floor(1000 / number));
-    }
 }
 
 function renderDice(number) {
     let dice = document.createElement('DIV');
     dice.classList.add('dice');
-    dice.setAttribute('number', number);
+
+    for (let i = 1; i <= 6; i++) {
+        let side = document.createElement('DIV');
+        side.classList.add('side');
+        setClass(side, i);
+        dice.append(side)
+    }
+
+    if (number > 6) {
+        number -= 6;
+    }
     setClass(dice, number);
     dicesWrapper.appendChild(dice);
 }
@@ -72,4 +77,8 @@ function setClass(elem, value) {
 
 function getRandomValue() {
     return Math.floor(Math.random() * 6 + 1);
+}
+
+function changeColor() {
+    document.body.classList.toggle('shrek');
 }
